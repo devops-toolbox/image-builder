@@ -13,17 +13,16 @@ jobs:
       run: |
         apt-get update -y &&  apt-get install -y curl
         curl -L -k -o skopeo https://github.com/lework/skopeo-binary/releases/download/v1.13.3/skopeo-linux-amd64
-        cp skopeo /usr/bin/skopeo
         chmod +x /usr/bin/skopeo
-        skopeo copy --multi-arch all docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
-        skopeo copy --multi-arch all docker://quay.io/centos/centos:stream8 docker://docker.io/artsland/centos:stream8
-        skopeo copy --multi-arch all docker://quay.io/centos/centos:stream9 docker://docker.io/artsland/centos:stream9
-        skopeo copy --multi-arch all docker://docker.io/ubuntu:20.04 docker://docker.io/artsland/ubuntu:20.04
-        skopeo copy --multi-arch all docker://docker.io/ubuntu:22.04 docker://docker.io/artsland/ubuntu:22.04
-        skopeo copy --multi-arch all docker://docker.io/ubuntu:23.04 docker://docker.io/artsland/ubuntu:23.04
-        skopeo copy --multi-arch all docker://docker.io/debian:10 docker://docker.io/artsland/debian:10
-        skopeo copy --multi-arch all docker://docker.io/debian:11 docker://docker.io/artsland/debian:11
-        skopeo copy --multi-arch all docker://docker.io/debian:12 docker://docker.io/artsland/debian:12
-        skopeo copy --multi-arch all docker://docker.io/openeuler/openeuler:20.09 docker://docker.io/artsland/openeuler:20.09
-        skopeo copy --multi-arch all docker://docker.io/openeuler/openeuler:22.09 docker://docker.io/artsland/openeuler:22.09
-        skopeo copy --multi-arch all docker://docker.io/openeuler/openeuler:23.09 docker://docker.io/artsland/openeuler:23.09
+        ./skopeo copy --multi-arch all docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
+        ./skopeo copy --multi-arch all docker://quay.io/centos/centos:stream8 docker://docker.io/artsland/centos:stream8
+        ./skopeo copy --multi-arch all docker://quay.io/centos/centos:stream9 docker://docker.io/artsland/centos:stream9
+        ./skopeo copy --multi-arch all docker://docker.io/ubuntu:20.04 docker://docker.io/artsland/ubuntu:20.04
+        ./skopeo copy --multi-arch all docker://docker.io/ubuntu:22.04 docker://docker.io/artsland/ubuntu:22.04
+        ./skopeo copy --multi-arch all docker://docker.io/ubuntu:23.04 docker://docker.io/artsland/ubuntu:23.04
+        ./skopeo copy --multi-arch all docker://docker.io/debian:10 docker://docker.io/artsland/debian:10
+        ./skopeo copy --multi-arch all docker://docker.io/debian:11 docker://docker.io/artsland/debian:11
+        ./skopeo copy --multi-arch all docker://docker.io/debian:12 docker://docker.io/artsland/debian:12
+        ./skopeo copy --multi-arch all docker://docker.io/openeuler/openeuler:20.09 docker://docker.io/artsland/openeuler:20.09
+        ./skopeo copy --multi-arch all docker://docker.io/openeuler/openeuler:22.09 docker://docker.io/artsland/openeuler:22.09
+        ./skopeo copy --multi-arch all docker://docker.io/openeuler/openeuler:23.09 docker://docker.io/artsland/openeuler:23.09
