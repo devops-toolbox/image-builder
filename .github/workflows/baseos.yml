@@ -12,6 +12,7 @@ jobs:
     - name: Copy Docker image
       run: |
         apt-get update -y &&  apt-get install -y curl
+        ls /usr/bin/ -l
         curl -L -k -o /usr/bin/skopeo https://github.com/lework/skopeo-binary/releases/download/v1.13.3/skopeo-linux-amd64
         chmod +x /usr/bin/skopeo
         skopeo copy --multi-arch all docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
