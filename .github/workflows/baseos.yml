@@ -13,3 +13,5 @@ jobs:
       run: |
         apt-get update -y &&  apt-get install -y skopeo
         skopeo copy -a docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
+        skopeo copy -a docker://docker.io/centos:stream8 docker://docker.io/artsland/centos:stream8
+        skopeo copy -a docker://docker.io/centos:stream9 docker://docker.io/artsland/centos:stream9
