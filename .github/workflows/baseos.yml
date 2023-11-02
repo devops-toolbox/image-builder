@@ -21,6 +21,6 @@ jobs:
         skopeo copy -a docker://docker.io/debian:10 docker://docker.io/artsland/debian:10
         skopeo copy -a docker://docker.io/debian:11 docker://docker.io/artsland/debian:11
         skopeo copy -a docker://docker.io/debian:12 docker://docker.io/artsland/debian:12
-        skopeo copy -a docker://docker.io/openeuler:20.04 docker://docker.io/artsland/openeuler:20.04
-        skopeo copy -a docker://docker.io/openeuler:22.04 docker://docker.io/artsland/openeuler:22.04
-        skopeo copy -a docker://docker.io/openeuler:23.04 docker://docker.io/artsland/openeuler:23.04
+        skopeo copy -a docker://docker.io/openeuler/openeuler:20.09 docker://docker.io/artsland/openeuler:20.09
+        skopeo copy -a docker://docker.io/openeuler/openeuler:22.09 docker://docker.io/artsland/openeuler:22.09
+        skopeo copy -a docker://docker.io/openeuler/openeuler:23.09 docker://docker.io/artsland/openeuler:23.09
