@@ -13,7 +13,7 @@ jobs:
       run: |
         apt-get update -y &&  apt-get install -y curl
         curl -L -k -o skopeo https://github.com/lework/skopeo-binary/releases/download/v1.13.3/skopeo-linux-amd64
-        chmod +x /usr/bin/skopeo
+        chmod +x skopeo
         ./skopeo copy --multi-arch all docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
         ./skopeo copy --multi-arch all docker://quay.io/centos/centos:stream8 docker://docker.io/artsland/centos:stream8
         ./skopeo copy --multi-arch all docker://quay.io/centos/centos:stream9 docker://docker.io/artsland/centos:stream9
