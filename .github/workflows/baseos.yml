@@ -15,12 +15,12 @@ jobs:
         skopeo copy -a docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
         skopeo copy -a docker://quay.io/centos/centos:stream8 docker://docker.io/artsland/centos:stream8
         skopeo copy -a docker://quay.io/centos/centos:stream9 docker://docker.io/artsland/centos:stream9
-        skopeo copy -a docker://docker.io/ubuntu:20 docker://docker.io/artsland/ubuntu:20
-        skopeo copy -a docker://docker.io/ubuntu:22 docker://docker.io/artsland/ubuntu:22
-        skopeo copy -a docker://docker.io/ubuntu:23 docker://docker.io/artsland/ubuntu:23
+        skopeo copy -a docker://docker.io/ubuntu:20.04 docker://docker.io/artsland/ubuntu:20.04
+        skopeo copy -a docker://docker.io/ubuntu:22.04 docker://docker.io/artsland/ubuntu:22.04
+        skopeo copy -a docker://docker.io/ubuntu:23.04 docker://docker.io/artsland/ubuntu:23.04
         skopeo copy -a docker://docker.io/debian:10 docker://docker.io/artsland/debian:10
         skopeo copy -a docker://docker.io/debian:11 docker://docker.io/artsland/debian:11
         skopeo copy -a docker://docker.io/debian:12 docker://docker.io/artsland/debian:12
-        skopeo copy -a docker://docker.io/openeuler:20 docker://docker.io/artsland/openeuler:20
-        skopeo copy -a docker://docker.io/openeuler:22 docker://docker.io/artsland/openeuler:22
-        skopeo copy -a docker://docker.io/openeuler:23 docker://docker.io/artsland/openeuler:23
+        skopeo copy -a docker://docker.io/openeuler:20.04 docker://docker.io/artsland/openeuler:20.04
+        skopeo copy -a docker://docker.io/openeuler:22.04 docker://docker.io/artsland/openeuler:22.04
+        skopeo copy -a docker://docker.io/openeuler:23.04 docker://docker.io/artsland/openeuler:23.04
