@@ -1,0 +1,15 @@
+name: baseos
+on: 
+  - workflow_call
+  - workflow_dispatch
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to GitHub Container Registry
+      run: echo "${{ secrets.DOCKER }}" | docker login -u artsland --password-stdin
+    - name: Copy Docker image
+      run: |
+        apt-get update -y &&  apt-get install -y skopeo
+        skopeo copy -a docker://docker.io/centos:7 docker://docker.io/artsland/centos:7
